@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Potential Skill Matches</h2>
+
+{% if matches %}
+    <ul class="list-group mt-3">
+    {% for username, skill_offer, skill_want in matches %}
+        <li class="list-group-item">
+            <strong>{{ username }}</strong> can teach <strong>{{ skill_offer }}</strong> and wants to learn <strong>{{ skill_want }}</strong>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No matches found yet. Try offering more skills!</p>
+{% endif %}
+
+<a href="{{ url_for('dashboard') }}" class="btn btn-secondary mt-3">Back to Dashboard</a>
+{% endblock %}

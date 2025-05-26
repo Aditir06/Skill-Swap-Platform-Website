@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Offer a Skill</h2>
+<form method="POST">
+    <input type="text" name="skill_offer" placeholder="What can you teach?" class="form-control mb-2" required>
+    <input type="text" name="skill_want" placeholder="What do you want to learn?" class="form-control mb-2" required>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
